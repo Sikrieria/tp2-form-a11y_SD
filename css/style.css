@@ -1,2 +1,25 @@
 /* Author: Sarah Dufour */
 /* Version : 1.00 */
+
+@charset "UTF-8" ;
+
+/* FONTS */
+
+/* Import autre pages CSS */
+
+@import url(normalize.css);
+@import url(grilles.css);
+@import url(composant/menu.css);
+@import url(typo.css);
+
+/* Body */
+
+/* Header */
+
+/* Nav */
+
+/* Secteur-Form-Truc Inbetween (Sujet a changement)
+
+
+/* Footer */
+
