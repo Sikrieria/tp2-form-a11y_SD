@@ -25,24 +25,26 @@
         <h1>Réservation</h1>
         <form id="reservation-form" action="reservation.html">
             <div class="form-section">
-                <h2>1. Vérifier la disponibilité</h2>
+                <fieldset>
+                <legend></label><h2>1. Vérifier la disponibilité</h2></legend>
                 <label for="date-arrivee">Date d'arrivée :</label>
-                <input type="date" id="date-arrivee" name="date-arrivee">
+                <input type="date" id="date-arrivee" name="date-arrivee" required>
 
                 <label for="date-depart">Date de départ :</label>
-                <input type="date" id="date-depart" name="date-depart">
+                <input type="date" id="date-depart" name="date-depart" required>
 
                 <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
                 <p id="availability-message"></p>
             </div>
-
+            </fieldset>
             <div class="form-section">
-                <h2>2. Nombre de personnes </h2>
-                <label>Adultes (maximum 4):</label>
-                <input id="adultes" name="adultes">
+                <fieldset>
+                <legend><h2>2. Nombre de personnes </h2></legend>
+                <label for="nombres-adultes">Adultes (maximum 4):</label>
+                <input type="number" id="adultes" name="adultes" min="1" max="4" required>
 
-                <label>Enfants (maximum 5):</label>
-                <input id="enfants" name="enfants">
+                <label for="nombres-enfants">Enfants (maximum 5):</label>
+                <input type="number" id="enfants" name="enfants" min="0" max="5" required>
 
                 <p>
                     Notes: <br>
@@ -50,9 +52,10 @@
                     2. si vous avez besoin de louer plusieurs chambres, <a href="">contactez-nous directement</a>
                 </p>
             </div>
-
+            </fieldset>
             <div class="form-section">
-                <h2>3. Choix chambre et forfait </h2>
+                <fieldset>
+                <legend><h2>3. Choix chambre et forfait </h2></legend>
 
                 <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
                 Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
@@ -64,24 +67,26 @@
                     CAN.</p>
 
             </div>
-
+            </fieldset>
             <div class="form-section">
-                <h2>4. Identification</h2>
-                <label>Prénom :</label>
-                <input id="prenom" name="prenom">
+                <fieldset>
+                <legend><h2>4. Identification</h2></legend>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
 
-                <label>Nom :</label>
-                <input id="nom" name="nom">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
 
-                <label>Email :</label>
-                <input id="email" name="email">
+                <label for="email">Email :</label>
+                <input type="text" id="email" name="email" required>
 
-                <label>Téléphone :</label>
-                <input id="telephone" name="telephone">
+                <label for="telephone">Téléphone :</label>
+                <input type="text" id="telephone" name="telephone" required>
 
             </div>
 
             <p><button type="submit">Confirmer la réservation</button></p>
+            </fieldset>
         </form>
     </main>
     <hr>
