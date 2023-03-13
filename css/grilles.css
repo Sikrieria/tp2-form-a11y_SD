@@ -34,7 +34,6 @@ body {
     header {
         grid-area: a;
     }
-
     aside,
     blockquote {
         grid-area: b;
