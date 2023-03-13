@@ -116,6 +116,7 @@ p {
 /*** Aside ***/
 .aside {
     text-align: center;
+    background-color: lightblue;
 }
 
 /* Footer */
