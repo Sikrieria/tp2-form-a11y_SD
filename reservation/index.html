@@ -21,7 +21,7 @@
         <nav class="nav">
             <ul class="nav__item">
                 <li class="nav__list">
-                    <a class="nav__link--active" href="../index.html"> Accueil </a>
+                    <a class="nav__link" href="../index.html"> Accueil </a>
                 </li>
                 <li class="nav__list">
                     <a class="nav__link" href="../index.html"> Historique</a>
@@ -33,7 +33,7 @@
                     <a class="nav__link" href="../index.html"> Contact </a>
                 </li>
                 <li class="nav__list">
-                    <a class="nav__link" href="../index.html"> Réservation </a>
+                    <a class="nav__link--active" href="../index.html"> Réservation </a>
                 </li>
             </ul>
         </nav>    
@@ -43,21 +43,150 @@
         <h1 class="h1">Réservation</h1>
         <form class="form" id="reservation-form" action="reservation.html">
             <div class="form-section">
-                <fieldset class="date">
-                <legend class="date__legend"><h2 class="h2">1. Vérifier la disponibilité</h2></legend>
-                <label class="date__label" for="date-arrivee">Date d'arrivée :</label>
-                <input type="date" id="date-arrivee" name="date-arrivee" required>
+                <fieldset class="disponibilite">
+                <legend class="disponibilite__legend"><h2 class="h2">1. Vérifier la disponibilité</h2></legend>
+                <div class="disponibilite__date">
+                    <label for="jour-arrivee"> <h3 class="h3"> Arrivée :</h3> </label>
+                    <!-- <label for="jour-arrivee">jour</label> -->
+                    <select id="jour-arrivee" name="jour-arrivee" required>
+                        <option label="jour"></option>
+                        <!-- option[value=$]{$}*31 -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <!-- <input type="number" id="jour-arrivee" name="jour-arrivee" min="1" max="31"> -->
 
-                <label class="date__label" for="date-depart">Date de départ :</label>
-                <input type="date" id="date-depart" name="date-depart" required>
+                    <!-- <label for="mois-arrivee">mois</label> -->
+                    <select id="mois-arrivee" name="mois-arrivee" required>
+                        <option label="mois"></option>
+                        <!-- option[value=janvier]{janvier}*12 -->
+                        <option value="1">janvier</option>
+                        <option value="2">février</option>
+                        <option value="3">mars</option>
+                        <option value="4">avril</option>
+                        <option value="5">mai</option>
+                        <option value="6">juin</option>
+                        <option value="7">juillet</option>
+                        <option value="8">août</option>
+                        <option value="9">septembre</option>
+                        <option value="10">octobre</option>
+                        <option value="11">novembre</option>
+                        <option value="12">décembre</option>
+                    </select>
+                    <!-- <input type="number" id="mois-arrivee" name="mois-arrivee" min="1" max="12"> -->
 
-                <button type="button" id="check-availability-button">Vérifier la disponibilité</button>
-                <p id="availability-message"></p>
+                    <!-- <label for="annee-arrivee">annee</label> -->
+                    <select id="annee-arrivee" name="annee-arrivee" required>
+                        <option label="année"></option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                    <!-- <input type="number" id="annee-arrivee" name="annee-arrivee" min="2023" max="2024"> -->
+                </div>
+
+                <label class="date__label" for="date-depart"> <h3 class="h3">Départ :</h3></label>
+                <div class="disponibilite__date">
+                    <select id="jour-depart" name="jour-depart" required>
+                        <option label="jour"></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select id="mois-depart" name="mois-depart" required>
+                        <option label="mois"></option>
+                        <option value="1">janvier</option>
+                        <option value="2">février</option>
+                        <option value="3">mars</option>
+                        <option value="4">avril</option>
+                        <option value="5">mai</option>
+                        <option value="6">juin</option>
+                        <option value="7">juillet</option>
+                        <option value="8">août</option>
+                        <option value="9">septembre</option>
+                        <option value="10">octobre</option>
+                        <option value="11">novembre</option>
+                        <option value="12">décembre</option>
+                    </select>
+                    <select id="annee-arrivee" name="annee-arrivee" required>
+                        <option label="année"></option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+
+                <p class="disponibilite__check">
+                    <button type="button" id="check-availability-button">Vérifier la
+                        disponibilité</button>
+                </p>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--erreur" aria-hidden="true"></span>
+                    </span>
+                    Message d'erreur par JavaScript
+                </p>
                 </fieldset>
                 </div>
             <div class="form-section">
                 <fieldset class="personnes">
-                <legend class="personnes__legend"><h2 class="h2">2. Nombre de personnes </h2></legend>
+                <legend class="personnes__legend"><h3 class="h3">2. Nombre de personnes </h3></legend>
                 <label class="personnes__label" for="adultes">Adultes (maximum 4):</label>
                 <input type="number" id="adultes" name="adultes" min="1" max="4" required>
 
@@ -69,26 +198,70 @@
                     1. la chambre familiale peut loger jusqu'à 6 personnes<br>
                     2. si vous avez besoin de louer plusieurs chambres, <a href="">contactez-nous directement</a>
                 </p>
+                
                 </fieldset>
                  </div>
-            <div class="form-section">
+
+                <div class="form-section">
                 <fieldset class="chambre">
                 <legend class="chambre__legend"><h2 class="h2">3. Choix chambre et forfait </h2></legend>
 
                 <!-- Trois boutons radio pour le choix du type de chambre simple, double ou familiale 
                 Les boutons doivent être des images cliquables: utiliser images/types-de-chambre -->
+                <ul class="row">
+                    <li class="forfait__li">
+                        <input type="radio" name="chambre" id="simple" value="simple" class="screen-reader-only"
+                            required>
+                        <label for="simple">
+                            <img src="../images/types-de-chambre/1-lit-double.jpg" alt="">
+                            <span class="produit">Simple <span class="prix">100$</span></span>
+
+                        </label>
+                    </li>
+                    <li class="forfait__li">
+                        <input type="radio" name="chambre" id="double" value="double"
+                            class="screen-reader-only">
+                        <label for="double">
+                            <img src="../images/types-de-chambre/2-lits-double.jpg" alt="">
+                            <span class="produit">Double <span class="prix">150$</span></span>
+                        </label>
+                    </li>
+                    <li class="forfait__li">
+                        <input type="radio" name="chambre" id="familiale" value="familiale"
+                            class="screen-reader-only">
+                        <label for="familiale">
+                            <img src="../images/types-de-chambre/chambre-familiale.jpg" alt="">
+                            <span class="produit">Familiale <span class="prix">200$</span></span>
+                        </label>
+                    </li>
+                </ul>
+                <p class="erreur">
+                    <span>
+                        <span class="screen-reader-only">Avertissement</span>
+                        <span class="icone icone--erreur" aria-hidden="true"></span>
+                    </span>
+                    Message d'erreur par JavaScript
+                </p>
 
                 <!-- [case à cocher] Inclure le petit déjeuner s'il-vous-plaît -->
+                <ul class="row">
+                    <li class="radio__li">
+                        <input type="radio" name="dejeuner" id="dejeuner" value="true" class="radio__dejeuner"
+                            required>
+                        <label for="dejeuner">
+                            <span class="span__dejeuner">Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
+                                12.50$
+                                CAN.</span>
 
-                <p class="chambre__p"> Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
-                    12.50$
-                    CAN.</p>
+                        </label>
+                    </li>
 
             </fieldset>
             </div>
+
             <div class="form-section">
                 <fieldset class="identification">
-                <legend class="identification__legend"><h2 class="h2">4. Identification</h2></legend>
+                <legend class="identification__legend"><h3 class="h3">4. Identification</h3></legend>
                 <label class="identification__label" for="prenom">Prénom :</label>
                 <input type="text" id="prenom" name="prenom" minlength="2" maxlength="15" required>
 
@@ -108,8 +281,8 @@
     </main>
     <hr>
     <aside class="aside">
-        <h2 class="h2">Nous joindre</h2>
-        <h3 class="h3">aubergedujacana@gmail.com</h3>
+        <h3 class="h3">Nous joindre</h3>
+        <h4 class="h4">aubergedujacana@gmail.com</h4>
         <p class="aside__p">
             Pour toutes demandes d’information, ou pour faire une demande de réservation pour l’un de nos chalets,
             remplisser le formulaire ci-contre.
