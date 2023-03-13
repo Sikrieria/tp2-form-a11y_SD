@@ -76,7 +76,7 @@
 /* Liens du menu */
 .nav__link {
     color: var(--nav-color);
-    background-color: rgba(145, 0, 145, 0.2);
+    background-color: burlywood;
     display: block;
     padding: 5px 10px;
     width: 100%;
@@ -88,8 +88,8 @@
 }
 
 .nav__link:hover {
-    color: teal;
-    background-color: var(--nav-hover-background-color);
+    color: burlywood;
+    background-color:darkred;
 }
 
 .nav__link:active {
@@ -100,7 +100,7 @@
 
 .nav__link:focus {
     outline-offset: -5px;
-    outline: var(--nav-background-color) auto 5px;
+    outline: darkgray auto 5px;
     box-shadow: none;
 }
 
@@ -115,13 +115,13 @@
     pour l'item de menu actif
     **/
 .nav__link--active {
-    border-left: 5px solid var(--nav-border-color);
+    border-left: 5px solid darkgreen;
 }
 
 @media (min-width: 600px) {
     .nav__link--active {
         border-left: none;
-        border-bottom: 5px solid var(--nav-border-color);
+        border-bottom: 5px solid darkgreen;
     }
 }
 

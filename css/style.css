@@ -13,11 +13,26 @@
 @import url(typo.css);
 @import url(composant/menu.css);
 
+
+
 /* Body */
 .body {
     background-image: url(../images/background-image/papyrus.webp);
 }
-/* Header */
+
+
+/*** Logo + Trade-says ***/
+header img {
+    transition: all 0.3s ease-in-out;
+    filter: drop-shadow(2px 2px 2px tan);
+    max-width: fit-content;
+}
+
+.titre {
+    text-align: center;
+}
+
+
 
 
 /* Section ---TYPE DE CHAMBRE --- */
