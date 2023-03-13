@@ -11,8 +11,7 @@
 
 </head>
 
-<body class="body">
-    <div class="ctnGrille"></div>
+<body class="body ctnGrille">
     <header class="header">
         <a class="logo" href="../index.html">
             <p class="titre__img"><img src="../images/logo-jacana.png" alt=""></p>
@@ -165,7 +164,7 @@
                         <option value="11">novembre</option>
                         <option value="12">décembre</option>
                     </select>
-                    <select id="annee-arrivee" name="annee-arrivee" required>
+                    <select id="annee-depart" name="annee-depart" required>
                         <option label="année"></option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
@@ -247,7 +246,7 @@
                 <!-- [case à cocher] Inclure le petit déjeuner s'il-vous-plaît -->
                 <ul class="row">
                     <li class="radio__li">
-                        <input type="radio" name="dejeuner" id="dejeuner" value="true" class="radio__dejeuner"
+                        <input type="checkbox" name="dejeuner" id="dejeuner" value="true" class="radio__dejeuner"
                             required>
                         <label for="dejeuner">
                             <span class="span__dejeuner">Le coût du petit déjeûner des adultes est de 25$ CAN, pour les enfants de moins de 12 ans c'est
@@ -316,7 +315,6 @@
             <a href="">Cégep de Sainte-Foy</a>.
         </p>
     </footer>
-</div>
 </body>
 
 </html>

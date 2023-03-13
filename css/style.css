@@ -20,28 +20,64 @@
     background-image: url(../images/background-image/papyrus.webp);
 }
 
+/* --- H1 --- */
+.h1 {
+    text-align: center;
+}
+
 
 /*** Logo + Trade-says ***/
 header img {
     transition: all 0.3s ease-in-out;
     filter: drop-shadow(2px 2px 2px tan);
     max-width: fit-content;
+    padding-left: 10px;
 }
 
 .titre {
+    padding-left: 20px ;
+}
+
+/**** Fieldset - Legend ****/
+
+.form-section fieldset {
+    text-decoration: dashed;
+}
+.form-section legend {
+    text-align: center;
+    font-style: italic;
+    color: steelblue;
+}
+
+/*** Section Date / Disponibilite ***/
+
+.disponibilite {
     text-align: center;
 }
 
+p {
+    text-align: center;
+}
 
+/*** Section --- NBR Visiteur --- ***/
+
+.personnes {
+    text-align: center;
+}
 
 
 /* Section ---TYPE DE CHAMBRE --- */
 
 /*** Partie pour les images ***/
-.forfait .row{
+.forfait img {
+    width: 75%;
+}
+
+.forfait .row {
     display: block;
     list-style: none;
-
+    padding: 0;
+    margin: 0;
 }
 @media (min-width: 600px) {
     .forfait .row {
@@ -51,15 +87,43 @@ header img {
 .forfait__li {
     flex-basis: 33%;
 }
-.forfait__li img{
-    width: 100%;
+
+.forfait__li img {
+    filter: grayscale();
 }
 
+.forfait__li [type="radio"]+label {
+    display: block;
+    padding: 1rem;
+}
+
+.forfait__li [type="radio"]:focus+label,
+.forfait__li [type="radio"]:checked+label {
+    background-color: burlywood;
+    font-weight: bold;
+}
 .forfait__li [type="radio"]:focus+label img,
 .forfait__li [type="radio"]:checked+label img,
 .forfait__li [type="radio"]:hover+label img {
     filter: none;
 }
 
+/*** Section  IDENTIFICATION ***/
+
+.identification label {
+    display: block;
+}
+/*** Aside ***/
+.aside {
+    text-align: center;
+}
+
 /* Footer */
+.footer {
+    background-color: lightblue;
+}
+.footer li {
+    list-style:none;
+    text-align: center;
+}
 
