@@ -88,13 +88,13 @@
 }
 
 .nav__link:hover {
-    color: #fff;
+    color: teal;
     background-color: var(--nav-hover-background-color);
 }
 
 .nav__link:active {
     color: #fff;
-    background-color: magenta;
+    background-color: darkcyan;
 }
 
 
