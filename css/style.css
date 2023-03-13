@@ -14,13 +14,37 @@
 @import url(composant/menu.css);
 
 /* Body */
-
+.body {
+    background-image: url(../images/background-image/papyrus.webp);
+}
 /* Header */
 
-/* Nav */
 
-/* Secteur-Form-Truc Inbetween (Sujet a changement)
+/* Section ---TYPE DE CHAMBRE --- */
 
+/*** Partie pour les images ***/
+.forfait .row{
+    display: block;
+    list-style: none;
+
+}
+@media (min-width: 600px) {
+    .forfait .row {
+        display: flex;
+    }
+}
+.forfait__li {
+    flex-basis: 33%;
+}
+.forfait__li img{
+    width: 100%;
+}
+
+.forfait__li [type="radio"]:focus+label img,
+.forfait__li [type="radio"]:checked+label img,
+.forfait__li [type="radio"]:hover+label img {
+    filter: none;
+}
 
 /* Footer */
 
